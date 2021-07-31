@@ -1,0 +1,81 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: ddd_laravel_nginx
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/var/www:cached
+    networks:
+      - ddd_laravel
+    depends_on:
+      - php
+
+  php:
+    container_name: ddd_laravel_php
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "9001:9001"
+    volumes:
+      - ./docker/php/init:/docker-entrypoint
+      - .:/var/www:cached
+    networks:
+      - ddd_laravel
+    env_file:
+      - .env
+    depends_on:
+      - mysql
+      - redis
+      - node
+
+  node:
+    container_name: ddd_laravel_node
+    image: node:latest
+    user: 1000:1000
+    volumes:
+      - .:/var/www:cached
+    working_dir: /var/www
+    environment:
+      NPM_CONFIG_PREFIX: ~/.npm-global
+    entrypoint: [ "bash", "/var/www/docker/etc/node/run-npm.sh" ]
+
+  mysql:
+    container_name: ddd_laravel_mysql
+    build:
+      context: .
+      dockerfile: docker/mysql/Dockerfile
+    ports:
+      - "3306:3306"
+    tty: true
+    volumes:
+      - vol_ddd_laravel_mysql:/var/lib/mysql
+    networks:
+      - ddd_laravel
+    env_file:
+      - ./docker/mysql/.env.mysql
+
+  redis:
+    container_name: ddd_laravel_redis
+    image: redis:alpine
+    volumes:
+      - vol_ddd_laravel_redis:/data
+
+networks:
+  ddd_laravel:
+    driver: "bridge"
+
+volumes:
+  vol_ddd_laravel_mysql:
+    driver: "local"
+  vol_ddd_laravel_redis:
+    driver: "local"
