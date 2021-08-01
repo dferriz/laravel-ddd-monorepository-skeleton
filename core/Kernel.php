@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Netflix\Core;
+namespace Project\Core;
 
 use Illuminate\Foundation\Console\Kernel as BaseKernel;
 

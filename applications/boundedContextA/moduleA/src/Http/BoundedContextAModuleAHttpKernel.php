@@ -1,6 +1,6 @@
 <?php
 
-namespace Netflix\Apps\Backoffice\Backend\Http;
+namespace Project\Apps\Backoffice\Backend\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -14,9 +14,9 @@ class BoundedContextAModuleAHttpKernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \Netflix\Apps\Backoffice\Backend\Http\Middleware\TrustProxies::class,
-        \Netflix\Apps\Backoffice\Backend\Http\Middleware\CheckForMaintenanceMode::class,
-        \Netflix\Apps\Backoffice\Backend\Http\Middleware\TrimStrings::class,
+        \Project\Apps\Backoffice\Backend\Http\Middleware\TrustProxies::class,
+        \Project\Apps\Backoffice\Backend\Http\Middleware\CheckForMaintenanceMode::class,
+        \Project\Apps\Backoffice\Backend\Http\Middleware\TrimStrings::class,
         \Fruitcake\Cors\HandleCors::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
@@ -42,7 +42,7 @@ class BoundedContextAModuleAHttpKernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \Netflix\Apps\Backoffice\Backend\Middleware\Authenticate::class,
+        'auth' => \Project\Apps\Backoffice\Backend\Middleware\Authenticate::class,
         'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,

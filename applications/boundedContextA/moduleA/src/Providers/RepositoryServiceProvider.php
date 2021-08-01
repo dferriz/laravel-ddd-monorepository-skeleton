@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Netflix\Apps\Backoffice\Backend\Providers;
+namespace Project\Apps\Backoffice\Backend\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Netflix\Backoffice\Movies\Domain\Repository\MovieRepository;
-use Netflix\Backoffice\Movies\Infrastructure\Persistance\Eloquent\MovieEloquentRepository;
+use Project\Backoffice\Movies\Domain\Repository\MovieRepository;
+use Project\Backoffice\Movies\Infrastructure\Persistance\Eloquent\MovieEloquentRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

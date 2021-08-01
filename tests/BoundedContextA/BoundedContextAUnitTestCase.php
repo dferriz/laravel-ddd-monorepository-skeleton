@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Netflix\Tests\Backoffice\Movies;
+namespace Project\Tests\Backoffice\Movies;
 
 use Mockery\MockInterface;
-use Netflix\Backoffice\Movies\Domain\Repository\MovieRepository;
-use Netflix\Tests\Shared\Infrastructure\PhpUnit\TestCase;
+use Project\Backoffice\Movies\Domain\Repository\MovieRepository;
+use Project\Tests\Shared\Infrastructure\PhpUnit\TestCase;
 
 abstract class BoundedContextAUnitTestCase extends TestCase
 {

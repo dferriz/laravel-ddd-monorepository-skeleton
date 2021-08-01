@@ -1,8 +1,8 @@
 <?php
 
-use Netflix\Apps\Backoffice\Backend\Providers\CommandServiceProvider;
-use Netflix\Apps\Backoffice\Backend\Providers\RepositoryServiceProvider;
-use Netflix\Apps\Backoffice\Backend\Providers\RouteServiceProvider;
+use Project\Apps\Backoffice\Backend\Providers\CommandServiceProvider;
+use Project\Apps\Backoffice\Backend\Providers\RepositoryServiceProvider;
+use Project\Apps\Backoffice\Backend\Providers\RouteServiceProvider;
 
 return [
 

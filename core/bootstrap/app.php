@@ -11,7 +11,7 @@
 |
 */
 
-$app = new \Netflix\Core\Application(
+$app = new \Project\Core\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
@@ -28,7 +28,7 @@ $app = new \Netflix\Core\Application(
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    \Netflix\Core\Kernel::class
+    \Project\Core\Kernel::class
 );
 
 $app->singleton(

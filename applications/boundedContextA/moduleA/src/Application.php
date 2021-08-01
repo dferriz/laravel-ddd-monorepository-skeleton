@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Netflix\Apps\Backoffice\Backend;
+namespace Project\Apps\Backoffice\Backend;
 
-use Netflix\Core\Application as CoreApplication;
+use Project\Core\Application as CoreApplication;
 use Symfony\Component\Messenger\Exception\RuntimeException;
 
 class Application extends CoreApplication

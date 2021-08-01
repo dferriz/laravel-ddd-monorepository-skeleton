@@ -1,6 +1,6 @@
 <?php
 
-namespace Netflix\Apps\Backoffice\Backend\Providers;
+namespace Project\Apps\Backoffice\Backend\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -31,7 +31,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapRoutes()
     {
         Route::middleware('api')
-            ->namespace('\Netflix\Apps\Backoffice\Backend\Http\Controllers')
+            ->namespace('\Project\Apps\Backoffice\Backend\Http\Controllers')
             ->group(base_path('routes/api.php'));
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Netflix\Apps\Backoffice\Backend\Http\Middleware;
+namespace Project\Apps\Backoffice\Backend\Http\Middleware;
 
 use Illuminate\Http\Middleware\TrustHosts as Middleware;
 

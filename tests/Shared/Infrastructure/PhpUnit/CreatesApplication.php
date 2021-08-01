@@ -1,6 +1,6 @@
 <?php
 
-namespace Netflix\Tests\Shared\Infrastructure\PhpUnit;
+namespace Project\Tests\Shared\Infrastructure\PhpUnit;
 
 use Illuminate\Contracts\Console\Kernel;
 

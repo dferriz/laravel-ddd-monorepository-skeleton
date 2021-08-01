@@ -1,6 +1,6 @@
 <?php
 
-namespace Netflix\Apps\Backoffice\Backend\Http\Middleware;
+namespace Project\Apps\Backoffice\Backend\Http\Middleware;
 
 use Fideloper\Proxy\TrustProxies as Middleware;
 use Illuminate\Http\Request;

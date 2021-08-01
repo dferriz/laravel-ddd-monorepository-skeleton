@@ -1,6 +1,6 @@
 <?php
 
-namespace Netflix\Apps\Backoffice\Backend;
+namespace Project\Apps\Backoffice\Backend;
 
 use Illuminate\Foundation\Exceptions\Handler as BaseExceptionHandler;
 use Throwable;

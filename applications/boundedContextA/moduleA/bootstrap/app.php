@@ -25,7 +25,7 @@ require __DIR__.'/../../../../vendor/autoload.php';
 |
 */
 
-$app = new \Netflix\Apps\Backoffice\Backend\Application(
+$app = new \Project\Apps\Backoffice\Backend\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
@@ -42,17 +42,17 @@ $app = new \Netflix\Apps\Backoffice\Backend\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    Netflix\Apps\Backoffice\Backend\Http\BoundedContextAModuleAHttpKernel::class,
+    Project\Apps\Backoffice\Backend\Http\BoundedContextAModuleAHttpKernel::class,
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    Netflix\Apps\Backoffice\Backend\Console\BoundedContextAConsoleKernel::class
+    Project\Apps\Backoffice\Backend\Console\BoundedContextAConsoleKernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    Netflix\Apps\Backoffice\Backend\BoundedContextAModuleAExceptionHandler::class
+    Project\Apps\Backoffice\Backend\BoundedContextAModuleAExceptionHandler::class
 );
 
 

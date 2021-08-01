@@ -7,9 +7,9 @@ use App\Services\Storage\FileManagerContract;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
-use Netflix\Backoffice\Movies\Application\Create\MovieCreator;
-use Netflix\Backoffice\Movies\Domain\Repository\MovieRepository;
-use Netflix\Backoffice\Movies\Infrastructure\Persistance\Eloquent\MovieEloquentRepository;
+use Project\Backoffice\Movies\Application\Create\MovieCreator;
+use Project\Backoffice\Movies\Domain\Repository\MovieRepository;
+use Project\Backoffice\Movies\Infrastructure\Persistance\Eloquent\MovieEloquentRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
